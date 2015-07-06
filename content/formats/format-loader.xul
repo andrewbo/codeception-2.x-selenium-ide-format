@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+ 
+<overlay id="codeception_format_loader_overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml">
+    <script type="application/x-javascript" src="chrome://selenium-ide/content/api.js"/>
+    <script type="application/x-javascript" src="chrome://php-formatters/content/formats/php-phpunit.js"/>
+    <script type="application/x-javascript" src="chrome://php-formatters/content/formats/php-testingselenium.js"/>
+    <html:script type="application/javascript">
+        var ide_api = new API();
+        ide_api.addPlugin("andrey@yii-develop.com");
+        ide_api.addPluginProvidedFormatter("codeceptionformatter", "PHP - Codeception 2.x", "chrome://php-formatters/content/formats/php-codeception-2.js");
+        ide_api.addPluginProvidedUserExtension("chrome://php-formatters/content/formats/php-codeception-2-events.js");
+
+    </html:script>
+</overlay>
